@@ -1,1 +1,162 @@
-*
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(213, 11, 11);
+    display: flex;
+    align-items: center;
+    text-overflow: 2px;
+    position: fixed;
+    top: 0;
+    
+}
+
+h1 {
+    color: white;
+    margin-left: 50px;
+    
+    
+}
+header nav ul{
+    display: flex;
+    list-style-type: none;
+    margin-left: 370px;
+
+    
+
+}
+
+.menu_opçoes li{
+ padding-left: 20px;
+ 
+}
+
+
+
+.menu_opçoes a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.menu_opçoes a:hover{
+    text-decoration:overline blue 2px;
+}
+
+#car_compr{
+    width: 30px;
+    position: relative;
+    left: 300px;
+    cursor: pointer;
+}
+
+#car_compr:hover{
+background-color: rgb(212, 102, 102);
+}
+/* Apresentação
+*/
+
+main{
+    background-color: rgb(247, 246, 246);
+}
+
+.produtos_card{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.titulo_prod{
+
+    margin: 150px;
+    text-decoration: underline red;
+}
+
+.list_prod{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.car_prod{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 3px;
+    
+    
+}
+
+.car_prod:hover{
+    box-shadow: 5px 5px 5px rgb(45, 44, 44);
+}
+
+.pizzas_card h2{
+ text-align: center;
+}
+
+.car_prod{
+    gap: 10px;
+    background-color: white;
+}
+
+.butao_adicio_car{
+    height: 30px;
+    width: 200px;
+    background-color:  rgb(213, 11, 11);
+    border-radius: 15px;
+    color: beige;
+    cursor: pointer;
+}
+
+.butao_adicio_car:hover{
+    background-color:  rgb(210, 49, 49);
+}
+
+/* RODAPÉ */
+
+footer{
+    margin-top: 50px;
+    height: 150px;
+    background-color:rgb(213, 11, 11) ;
+    align-items: center;
+    
+    
+}
+
+.rodape{
+    display: flex;
+    justify-content:space-between;  
+    padding-top: 50px; 
+}
+
+#dados_loc p{
+    color: white;
+}
+
+#wha_icone{
+height: 50px;
+border-radius: 25px;
+display: flex;
+position: sticky;
+
+}
+
+#subi_top img{
+    height: 50px;
+    cursor: pointer;
+}
+
+#subi_top img:hover{
+transform: translateY(-5px);
+background-color: brown;
+}

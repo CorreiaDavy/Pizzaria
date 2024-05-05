@@ -1,0 +1,59 @@
+<!-- carrinho.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="styles/global.css">
+</head>
+<body>
+    <section class="carrinho_cabecalho">
+        <h2>Carrinho de compras</h2>
+
+       <a href="index.html"> <button type="button">Continuar comprando</button></a>
+
+    </section>
+    
+    <table>
+
+        <td>Imagem</td>
+        <td>Produto</td>
+        <td>Valor</td>
+        <td>Quantidade</td>
+        <tbody>
+            <tr>
+                <td class="img_pro_car">
+                    <img src="img/Bebidas/pexels-olenkabohovyk-3819969 (1).jpg">
+                </td>
+                <td><p>Pizza de Peperone</p></td>
+                <td><strong>R$ 86.00</strong></td>
+                <td><input type="number" min="0"   value="2" class="valor_input_prod"></td>
+            </tr>
+
+            <tr>
+                <td class="img_pro_car">
+                    <img src="img/Bebidas/pexels-olenkabohovyk-3819969 (1).jpg">
+                </td>
+                <td><p>Pizza de Peperone</p></td>
+                <td><strong>R$ 86.00</strong></td>
+                <td><input type="number" min="0"   value="2" class="valor_input_prod"></td>
+
+            </tr>
+
+            <tr>
+                <td colspan="2"></td> <!-- Colunas vazias para alinhar com as colunas do restante da tabela -->
+                <td><strong>Total:</strong></td>
+                <td><strong>R$ 172.00</strong></td> <!-- Aqui você deve calcular o total dinamicamente usando JavaScript -->
+            </tr>
+        </tbody>
+        
+    </table>
+         <section id="finaliza_compra_bot">
+        <button >Finalizar Compra</button>
+    </section>
+    
+    
+    <script src="scripts/script.js"></script>
+</body>
+</html>

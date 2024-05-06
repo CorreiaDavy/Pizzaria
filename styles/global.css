@@ -100,8 +100,11 @@ main{
     box-shadow: 5px 5px 5px rgb(45, 44, 44);
 }
 
-.pizzas_card h2{
+#pizzas_card h2{
  text-align: center;
+}
+#bebidas_prod{
+    text-align: center;
 }
 
 .car_prod{
@@ -182,6 +185,20 @@ td, th {
 
 .valor_input_prod {
     width: 50px; /* Ajuste conforme necessário */
+}
+
+.remove_prod{
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    background-color:rgb(213, 11, 11) ;
+    color: white;
+}
+
+.remove_prod:hover{
+    background-color:  rgb(195, 69, 69);
+    transform: translateY(-1px);
+    transition: all 0.02s;
 }
 
 .carrinho_cabecalho{

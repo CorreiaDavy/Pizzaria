@@ -15,36 +15,47 @@
 
     </section>
     
-    <table>
+    <table class="tabela_car">
 
         <td>Imagem</td>
         <td>Produto</td>
         <td>Valor</td>
         <td>Quantidade</td>
+        <td>Remover</td>
         <tbody>
-            <tr>
+            <tr class="produtos_carAdd">
                 <td class="img_pro_car">
                     <img src="img/Bebidas/pexels-olenkabohovyk-3819969 (1).jpg">
                 </td>
                 <td><p>Pizza de Peperone</p></td>
                 <td><strong>R$ 86.00</strong></td>
                 <td><input type="number" min="0"   value="2" class="valor_input_prod"></td>
+                <td>
+                    <button type="button" class="remove_prod">Remover</button>
+                </td>
+                
             </tr>
 
-            <tr>
+            <tr class="produtos_carAdd">
                 <td class="img_pro_car">
                     <img src="img/Bebidas/pexels-olenkabohovyk-3819969 (1).jpg">
                 </td>
                 <td><p>Pizza de Peperone</p></td>
                 <td><strong>R$ 86.00</strong></td>
                 <td><input type="number" min="0"   value="2" class="valor_input_prod"></td>
+                <td>
+                <button type="button" class="remove_prod">Remover</button>
+            </td>
+    
 
             </tr>
+            
+                
 
-            <tr>
+            <tr class="divTotalCar">
                 <td colspan="2"></td> <!-- Colunas vazias para alinhar com as colunas do restante da tabela -->
                 <td><strong>Total:</strong></td>
-                <td><strong>R$ 172.00</strong></td> <!-- Aqui você deve calcular o total dinamicamente usando JavaScript -->
+                <td><strong id="total_carrinho">R$ 172.00</strong></td> <!-- Aqui você deve calcular o total dinamicamente usando JavaScript -->
             </tr>
         </tbody>
         

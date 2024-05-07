@@ -65,6 +65,7 @@ background-color: rgb(212, 102, 102);
 
 main{
     background-color: rgb(247, 246, 246);
+    flex-direction: column;
 }
 
 .produtos_card{
@@ -205,6 +206,7 @@ td, th {
     display: flex;
     justify-content: space-around;
     margin: 20px;
+    margin-top: 150px;
 }
 
 .carrinho_cabecalho button{

@@ -80,54 +80,44 @@ atualizarCarRemoveInputzero()
 
 
 //adicionar produtos no carrinho
-function adicionarAocarrin(){
-const adicioanrProd = document.getElementsByClassName("butao_adicio_car");
-for(var i=0; i<adicioanrProd.length;i++){
-    adicioanrProd[i].addEventListener("click" , function(event){
-        const botao = event.target.parentElement
-        const nomeProduto = botao.querySelector(".car_prod p").innerText;
-        const valorProd = botao.querySelector(".car_prod strong").innerText;
-        const imagProd= botao.querySelector(".car_prod img").src
 
-        console.log(nomeProduto)
+    const adicioanrProd = document.getElementsByClassName("butao_adicio_car");
+    for(var i = 0; i < adicioanrProd.length; i++){
+        adicioanrProd[i].addEventListener("click", adiProdCarCompra)
+    }
+
+
+    function adiProdCarCompra (event){
+        const botao = event.target;
+        const produtoInfor = botao.parentElement
+
+        const nomeProduto = produtoInfor.querySelector("p").innerText;
+        const valorProd = produtoInfor.querySelector("strong").innerText;
+        const imagProd = produtoInfor.querySelector("img").src;
+
+     let crianovoProd = document.createElement("tr");
+        crianovoProd.classList.add("produtos_carAdd");
+
+        crianovoProd.innerHTML=
+        `<td class="img_pro_car">
+        <img src="${imagProd}">
+    </td>
+    <td><p>${nomeProduto}</p></td>
+    <td><strong>${valorProd}</strong></td>
+    <td><input type="number" min="0"   value="1" class="valor_input_prod"></td>
+    <td>
+        <button type="button" class="remove_prod">Remover</button>
+    </td>
+        `
+
+        const tabelatbody = document.querySelector(".dentro_tabel");
+
+        if (tabelatbody) { // Verificar se tbody existe
+            tabelatbody.append(crianovoProd);
+        } else {
+            console.error("tbody não encontrado.");
+        }
         
-    } );
-
-}
-
-let novoProdutCar = document.createElement("tr");
-novoProdutCar.classList.add("produtos_carAdd");
-
-novoProdutCar.innerHTML=
-
-`
-               <td class="img_pro_car">
-                    <img src="${imagProd}">
-                </td>
-                <td><p>${nomeProduto}</p></td>
-                <td><strong>${valorProd}</strong></td>
-                <td><input type="number" min="0"   value="1" class="valor_input_prod"></td>
-                <td>
-                    <button type="button" class="remove_prod">Remover</button>
-                </td>
-
-`
-
-const tabelaBody = document.querySelector(".tabela_car tbody")
-tabelaBody.append(novoProdutCar);
 
 
-
-}
-
-    
-
-
-
-
-
-
-   
-
-
-        
+    }

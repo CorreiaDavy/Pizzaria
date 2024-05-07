@@ -118,6 +118,18 @@ atualizarCarRemoveInputzero()
             console.error("tbody não encontrado.");
         }
         
+        removerProdCar()
+        somaTotalcarrinho()
+    atualizarCarRemoveInputzero()
+            
+        } 
 
+        
+       
+        
+        
+            
 
-    }
+    
+    
+   

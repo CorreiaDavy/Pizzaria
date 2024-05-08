@@ -202,14 +202,14 @@ td, th {
     transition: all 0.02s;
 }
 
-.carrinho_cabecalho{
+#carrinho_cabecalho{
     display: flex;
     justify-content: space-around;
     margin: 20px;
     margin-top: 150px;
 }
 
-.carrinho_cabecalho button{
+#carrinho_cabecalho button{
     width: 150px;
     height: 35px;
     border-radius: 20px;
@@ -217,7 +217,7 @@ td, th {
     color: white;
 }
 
-.carrinho_cabecalho button:hover{
+#carrinho_cabecalho button:hover{
     background-color:  rgb(195, 69, 69);
     transform: translateY(-1px);
     transition: all 0.02s;

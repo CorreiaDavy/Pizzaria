@@ -270,7 +270,7 @@
                 </div>
                 <div class="car_prod">
                     <img src="img/Bebidas/pexels-olenkabohovyk-3819969 (1).jpg">
-                    <p>Pizza de Peperone</p>
+                    <p>Coca-cola 2L</p>
                     <strong>R$ 86.00</strong>
                     <button type="button" class="butao_adicio_car">Adicionar ao </button>
                 </div>
@@ -291,39 +291,40 @@
             </section>
             
             <table class="tabela_car">
-               
+                <thead>
                 <td>Imagem</td>
                 <td>Produto</td>
                 <td>Valor</td>
                 <td>Quantidade</td>
                 <td>Remover</td>
+            </thead>
                 <tbody class="dentro_tabel">
                     <tr class="produtos_carAdd">
                         <td class="img_pro_car">
                             <img src="img/Bebidas/pexels-olenkabohovyk-3819969 (1).jpg">
                         </td>
-                        <td><p>Pizza de Peperone</p></td>
+                        <td><p class="ProdutoNomeCard">Pizza de Peperone</p></td>
                         <td><strong>R$ 86.00</strong></td>
-                        <td><input type="number" min="0"   value="2" class="valor_input_prod"></td>
+                        <td><input type="number" min="0"   value="1" class="valor_input_prod"></td>
                         <td>
                             <button type="button" class="remove_prod">Remover</button>
                         </td>
-                        
                     </tr>
-        
+                
+          
                     <tr class="produtos_carAdd">
                         <td class="img_pro_car">
                             <img src="img/Bebidas/pexels-olenkabohovyk-3819969 (1).jpg">
                         </td>
-                        <td><p>Pizza de Peperone</p></td>
+                        <td><p class="ProdutoNomeCard">Coca-cola 2L</p></td>
                         <td><strong>R$ 86.00</strong></td>
-                        <td><input type="number" min="0"   value="2" class="valor_input_prod"></td>
+                        <td><input type="number" min="0"   value="1" class="valor_input_prod"></td>
                         <td>
                         <button type="button" class="remove_prod">Remover</button>
                     </td>
             
         
-                    </tr>
+                    </tr> 
                     
                         
                    
@@ -333,7 +334,7 @@
                         <td colspan="2"></td> <!-- Colunas vazias para alinhar com as colunas do restante da tabela -->
                         <td><strong>Total:</strong></td>
                         <td><strong id="total_carrinho">R$ 172.00</strong></td> <!-- Aqui você deve calcular o total dinamicamente usando JavaScript -->
-                    </tr>
+                    </tr> 
                 </tfoot>
                 
             </table>

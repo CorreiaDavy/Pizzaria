@@ -15,6 +15,8 @@ function removerProdCar(){
             if (document.getElementsByClassName("produtos_carAdd").length != 0) {
                 // Se o carrinho estiver vazio, chame somaTotalcarrinho() para recalcular o total
                 somaTotalcarrinho();
+                
+                
             }
     
             if (document.getElementsByClassName("produtos_carAdd").length === 0) {
@@ -79,17 +81,21 @@ function removerProdCar(){
     atualizarCarRemoveInputzero()
     
     
-    //adicionar produtos no carrinho
-    
+    //analisar os produtos para adicionar ao carrinho
+    function carAdicioanr(){
         const adicioanrProd = document.getElementsByClassName("butao_adicio_car");
         for(var i = 0; i < adicioanrProd.length; i++){
             adicioanrProd[i].addEventListener("click", adiProdCarCompra)
         }
+    }
     
+    carAdicioanr()
 
+        function analisarInputProcar(){
+            
+        }
         
-        
-    
+        // adicionar produtos ao carrinho de acordo como nome do produto, valor e imagem
         function adiProdCarCompra (event){
             const botao = event.target;
             const produtoInfor = botao.parentElement
@@ -97,6 +103,25 @@ function removerProdCar(){
             const nomeProduto = produtoInfor.querySelector("p").innerText;
             const valorProd = produtoInfor.querySelector("strong").innerText;
             const imagProd = produtoInfor.querySelector("img").src;
+
+            
+
+                //atualização do input se clicar em adicionar o mesmo produto no carrinho
+                const aumenInput = document.getElementsByClassName("ProdutoNomeCard");
+                for(var i=0; i<aumenInput.length;i++){
+
+                    if(aumenInput[i].innerText===nomeProduto){
+                        aumenInput[i].parentElement.parentElement.getElementsByClassName("valor_input_prod")[0].value++
+
+                        somaTotalcarrinho()
+                        return
+                    }
+                    
+                }
+            
+
+           
+
 
     
          let crianovoProd = document.createElement("tr");
@@ -106,34 +131,36 @@ function removerProdCar(){
             `<td class="img_pro_car">
             <img src="${imagProd}">
         </td>
-        <td><p>${nomeProduto}</p></td>
+        <td><p class="nomeProduto">${nomeProduto}</p></td>
         <td><strong>${valorProd}</strong></td>
         <td><input type="number" min="0"   value="1" class="valor_input_prod"></td>
         <td>
             <button type="button" class="remove_prod">Remover</button>
         </td>
             `
+           
+             
     
             const tabelatbody = document.querySelector(".dentro_tabel");
-    
-            if (tabelatbody) { // Verificar se tbody existe
-                tabelatbody.append(crianovoProd);
-            } else {
-                console.error("tbody não encontrado.");
-            }
+            tabelatbody.append(crianovoProd);
             
-            removerProdCar()
-            somaTotalcarrinho()
-        atualizarCarRemoveInputzero()
-                
-            } 
-    
-            
+
+   
            
             
+            removerProdCar()
+            atualizarCarRemoveInputzero()
+            somaTotalcarrinho() 
+            adiProdCarCompra()    
+            } 
+
             
-                
+        
+           
+            
+           
+                     
     
+         
         
-        
-       
+    

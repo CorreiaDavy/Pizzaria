@@ -28,10 +28,9 @@ function removerProdCar(){
     
     }
     
+    let somacarrinho = 0
     //atualizar carrinho de acordo com os produtos nele, e apresenta a soma do total no carrinho
     function somaTotalcarrinho(){
-    
-    let somacarrinho = 0
     const calValorProdCar = document.getElementsByClassName("produtos_carAdd");
     for(var i=0; i<calValorProdCar.length;i++){
         const produtoind_car = calValorProdCar[i]
@@ -102,26 +101,24 @@ function removerProdCar(){
     
             const nomeProduto = produtoInfor.querySelector("p").innerText;
             const valorProd = produtoInfor.querySelector("strong").innerText;
-            const imagProd = produtoInfor.querySelector("img").src;
+            const imagProd = produtoInfor.querySelector("img").src
+                
+               //atualização do input se clicar em adicionar o mesmo produto no carrinho
+                   const inputs = document.querySelectorAll('.valor_input_prod');
+                    for (let input of inputs) {
+                    const nomeProdutoInput = input.parentElement.parentElement.querySelector('.nomeProduto').innerText;
+                     if (nomeProdutoInput === nomeProduto) {
+                     input.value++;
+                      somaTotalcarrinho();
+                      return;
 
-            
-
-                //atualização do input se clicar em adicionar o mesmo produto no carrinho
-                const aumenInput = document.getElementsByClassName("ProdutoNomeCard");
-                for(var i=0; i<aumenInput.length;i++){
-
-                    if(aumenInput[i].innerText===nomeProduto){
-                        aumenInput[i].parentElement.parentElement.getElementsByClassName("valor_input_prod")[0].value++
-
-                        somaTotalcarrinho()
-                        return
-                    }
-                    
-                }
+                      
+    }
+}
             
 
            
-
+                   
 
     
          let crianovoProd = document.createElement("tr");
@@ -151,16 +148,43 @@ function removerProdCar(){
             removerProdCar()
             atualizarCarRemoveInputzero()
             somaTotalcarrinho() 
-            adiProdCarCompra()    
+                
             } 
 
-            
-        
-           
-            
-           
-                     
+            function finalizarCompraBot(){
+                const botaoFinaliCompr = document.getElementById("butaoFin");
+                botaoFinaliCompr.addEventListener("click", function(){
+                    const valorcarrinho = document.getElementById("total_carrinho").innerText
+                    if(valorcarrinho==="R$ 0.00"){
+                        alert("Carrinho de Compras Vazio!")
+                    }else{
+                        alert(
+                        `                    Muito Obrigado pela preferência!
+                        Sua Compra no valor total de ${valorcarrinho}. 
+                        Foi realizada com sucesso!
+                        `
+                    )
+                    }
+                    
+                   
+                    
+                })
     
-         
-        
+            }
+                
+            finalizarCompraBot()
+            somaTotalcarrinho()
+
+             
+            
+
+            
+            
+
+            
+            
     
+    
+             
+    
+               

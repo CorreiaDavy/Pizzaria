@@ -174,13 +174,11 @@ function removerProdCar(){
                 
             finalizarCompraBot()
             somaTotalcarrinho()
+            
 
              
             
-
             
-            
-
             
             
     

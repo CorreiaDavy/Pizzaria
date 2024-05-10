@@ -28,9 +28,10 @@ function removerProdCar(){
     
     }
     
-    let somacarrinho = 0
+    
     //atualizar carrinho de acordo com os produtos nele, e apresenta a soma do total no carrinho
     function somaTotalcarrinho(){
+        let somacarrinho = 0
     const calValorProdCar = document.getElementsByClassName("produtos_carAdd");
     for(var i=0; i<calValorProdCar.length;i++){
         const produtoind_car = calValorProdCar[i]
@@ -174,6 +175,7 @@ function removerProdCar(){
                 
             finalizarCompraBot()
             somaTotalcarrinho()
+            removerProdCar()
             
 
              

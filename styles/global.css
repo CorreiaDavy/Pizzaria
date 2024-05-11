@@ -5,18 +5,29 @@
     header h1{
         margin: 10px;
     }
-   .menu_opçoes{
-    margin-left: 100px;
-   }
+    .menu_opçoes{
+        display: none;
+    }
 
-   #menu_principal{
-    display: flex;
-    right: 100px;
-   }
+    #menu_principal{
+        display: flex;
+        right: 160px;
+    }
+
+    /*Carrinho de comrpas, deixar próximo ao título*/
+    .icone_cabecalho{
+        display: flex;
+        position: relative;
+        right: 250px;
+        gap: 10px;
+    }
+
+   
     /*Deixar os produtos alinhados e uma abaixo do outro*/
     .list_prod{
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
      /*tamando do card dos produtos*/
     .car_prod{
@@ -27,12 +38,17 @@
     .car_prod img{
         width: 200px;
     }
+
+
+    
+    
+
 }
 
 /* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
 @media only screen and (min-width: 600px) {
-    body{
-        background: yellow;
+    .car_prod{
+        background-color: black;
     }
 }
 
@@ -82,6 +98,7 @@ h1 {
     margin-left: 50px;
     
     
+    
 }
 header nav ul{
     display: flex;
@@ -123,10 +140,12 @@ background-color: rgb(212, 102, 102);
 
 
 #menu_principal {
+    
     width: 30px;
     position: relative;
-    left: 500px;
-    display: none;
+    left: 300px;
+    
+    
 }
 /* Apresentação
 */

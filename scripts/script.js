@@ -168,6 +168,8 @@ function removerProdCar(){
                     )
 
                     
+
+                     
                     }
                     
                    
@@ -179,6 +181,9 @@ function removerProdCar(){
             finalizarCompraBot()
             somaTotalcarrinho()
             removerProdCar()
+            
+
+
             
 
              

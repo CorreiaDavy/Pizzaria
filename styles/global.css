@@ -1,9 +1,61 @@
 
-    
-    
-  
 
-  
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+    header h1{
+        margin: 10px;
+    }
+   .menu_opçoes{
+    margin-left: 100px;
+   }
+
+   #menu_principal{
+    display: flex;
+    right: 100px;
+   }
+    /*Deixar os produtos alinhados e uma abaixo do outro*/
+    .list_prod{
+        flex-direction: column;
+        align-items: center;
+    }
+     /*tamando do card dos produtos*/
+    .car_prod{
+        width: 300px;
+        
+    }
+    /* tamanho da imagem dos produtos*/
+    .car_prod img{
+        width: 200px;
+    }
+}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {
+    body{
+        background: yellow;
+    }
+}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px) {
+    body{
+        background: green;
+    }
+}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px) {
+    .car_prod{
+        flex-direction: column;
+    }
+}
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px) {
+    .car_prod{
+        flex-direction: column;
+    }
+}
 
 
 *{
@@ -67,6 +119,14 @@ header nav ul{
 
 #car_compr:hover{
 background-color: rgb(212, 102, 102);
+}
+
+
+#menu_principal {
+    width: 30px;
+    position: relative;
+    left: 500px;
+    display: none;
 }
 /* Apresentação
 */

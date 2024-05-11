@@ -160,11 +160,14 @@ function removerProdCar(){
                         alert("Carrinho de Compras Vazio!")
                     }else{
                         alert(
-                        `                    Muito Obrigado pela preferência!
+                        `                   
+                        Muito Obrigado pela preferência!
                         Sua Compra no valor total de ${valorcarrinho}. 
                         Foi realizada com sucesso!
                         `
                     )
+
+                    
                     }
                     
                    
